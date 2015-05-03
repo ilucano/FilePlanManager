@@ -31,21 +31,21 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOptions));
             this.btnCancel = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             this.imgLst = new System.Windows.Forms.ImageList(this.components);
+            this.btnSave = new System.Windows.Forms.Button();
             this.grpGeneral = new System.Windows.Forms.GroupBox();
-            this.chkValidateExcel = new System.Windows.Forms.CheckBox();
-            this.txtControlSheetName = new System.Windows.Forms.TextBox();
             this.lblControlSheet = new System.Windows.Forms.Label();
+            this.txtControlSheetName = new System.Windows.Forms.TextBox();
+            this.chkValidateExcel = new System.Windows.Forms.CheckBox();
             this.grpCarpetas = new System.Windows.Forms.GroupBox();
-            this.chkLevelCheck = new System.Windows.Forms.CheckBox();
-            this.chkRepeatedFolders = new System.Windows.Forms.CheckBox();
-            this.chkValidaLargoCarp = new System.Windows.Forms.CheckBox();
-            this.lblLenghtField = new System.Windows.Forms.Label();
-            this.txtCarpLargo = new System.Windows.Forms.TextBox();
             this.lblCarNoPerm = new System.Windows.Forms.Label();
             this.txtCharsCarp = new System.Windows.Forms.TextBox();
             this.chkCharsCarp = new System.Windows.Forms.CheckBox();
+            this.lblLenghtField = new System.Windows.Forms.Label();
+            this.txtCarpLargo = new System.Windows.Forms.TextBox();
+            this.chkValidaLargoCarp = new System.Windows.Forms.CheckBox();
+            this.chkRepeatedFolders = new System.Windows.Forms.CheckBox();
+            this.chkLevelCheck = new System.Windows.Forms.CheckBox();
             this.grpGrupos = new System.Windows.Forms.GroupBox();
             this.lblCharsNoPerm = new System.Windows.Forms.Label();
             this.txtCharsGrup = new System.Windows.Forms.TextBox();
@@ -79,6 +79,13 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // imgLst
+            // 
+            this.imgLst.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgLst.ImageStream")));
+            this.imgLst.TransparentColor = System.Drawing.Color.White;
+            this.imgLst.Images.SetKeyName(0, "1430085177_document-save.png");
+            this.imgLst.Images.SetKeyName(1, "1430085211_dialog-error.png");
+            // 
             // btnSave
             // 
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -92,13 +99,6 @@
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.UseVisualStyleBackColor = true;
             // 
-            // imgLst
-            // 
-            this.imgLst.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgLst.ImageStream")));
-            this.imgLst.TransparentColor = System.Drawing.Color.White;
-            this.imgLst.Images.SetKeyName(0, "1430085177_document-save.png");
-            this.imgLst.Images.SetKeyName(1, "1430085211_dialog-error.png");
-            // 
             // grpGeneral
             // 
             this.grpGeneral.Controls.Add(this.lblControlSheet);
@@ -111,6 +111,22 @@
             this.grpGeneral.TabStop = false;
             this.grpGeneral.Text = "General";
             // 
+            // lblControlSheet
+            // 
+            this.lblControlSheet.AutoSize = true;
+            this.lblControlSheet.Location = new System.Drawing.Point(37, 40);
+            this.lblControlSheet.Name = "lblControlSheet";
+            this.lblControlSheet.Size = new System.Drawing.Size(146, 13);
+            this.lblControlSheet.TabIndex = 2;
+            this.lblControlSheet.Text = "Nombre de la Hoja de Control";
+            // 
+            // txtControlSheetName
+            // 
+            this.txtControlSheetName.Location = new System.Drawing.Point(189, 37);
+            this.txtControlSheetName.Name = "txtControlSheetName";
+            this.txtControlSheetName.Size = new System.Drawing.Size(236, 20);
+            this.txtControlSheetName.TabIndex = 1;
+            // 
             // chkValidateExcel
             // 
             this.chkValidateExcel.AutoSize = true;
@@ -121,22 +137,6 @@
             this.chkValidateExcel.Text = "Validar Hoja de Control";
             this.chkValidateExcel.UseVisualStyleBackColor = true;
             this.chkValidateExcel.CheckedChanged += new System.EventHandler(this.chkValidateExcel_CheckedChanged);
-            // 
-            // txtControlSheetName
-            // 
-            this.txtControlSheetName.Location = new System.Drawing.Point(189, 37);
-            this.txtControlSheetName.Name = "txtControlSheetName";
-            this.txtControlSheetName.Size = new System.Drawing.Size(236, 20);
-            this.txtControlSheetName.TabIndex = 1;
-            // 
-            // lblControlSheet
-            // 
-            this.lblControlSheet.AutoSize = true;
-            this.lblControlSheet.Location = new System.Drawing.Point(37, 40);
-            this.lblControlSheet.Name = "lblControlSheet";
-            this.lblControlSheet.Size = new System.Drawing.Size(146, 13);
-            this.lblControlSheet.TabIndex = 2;
-            this.lblControlSheet.Text = "Nombre de la Hoja de Control";
             // 
             // grpCarpetas
             // 
@@ -154,53 +154,6 @@
             this.grpCarpetas.TabIndex = 8;
             this.grpCarpetas.TabStop = false;
             this.grpCarpetas.Text = "Carpetas";
-            // 
-            // chkLevelCheck
-            // 
-            this.chkLevelCheck.AutoSize = true;
-            this.chkLevelCheck.Location = new System.Drawing.Point(6, 19);
-            this.chkLevelCheck.Name = "chkLevelCheck";
-            this.chkLevelCheck.Size = new System.Drawing.Size(205, 17);
-            this.chkLevelCheck.TabIndex = 4;
-            this.chkLevelCheck.Text = "Verificacion de Nivel Real con Campo";
-            this.chkLevelCheck.UseVisualStyleBackColor = true;
-            // 
-            // chkRepeatedFolders
-            // 
-            this.chkRepeatedFolders.AutoSize = true;
-            this.chkRepeatedFolders.Location = new System.Drawing.Point(6, 42);
-            this.chkRepeatedFolders.Name = "chkRepeatedFolders";
-            this.chkRepeatedFolders.Size = new System.Drawing.Size(153, 17);
-            this.chkRepeatedFolders.TabIndex = 5;
-            this.chkRepeatedFolders.Text = "Error en carpetas repetidas";
-            this.chkRepeatedFolders.UseVisualStyleBackColor = true;
-            // 
-            // chkValidaLargoCarp
-            // 
-            this.chkValidaLargoCarp.AutoSize = true;
-            this.chkValidaLargoCarp.Location = new System.Drawing.Point(6, 65);
-            this.chkValidaLargoCarp.Name = "chkValidaLargoCarp";
-            this.chkValidaLargoCarp.Size = new System.Drawing.Size(139, 17);
-            this.chkValidaLargoCarp.TabIndex = 6;
-            this.chkValidaLargoCarp.Text = "Validar Largo de Campo";
-            this.chkValidaLargoCarp.UseVisualStyleBackColor = true;
-            this.chkValidaLargoCarp.CheckedChanged += new System.EventHandler(this.chkValidaLargoCarp_CheckedChanged);
-            // 
-            // lblLenghtField
-            // 
-            this.lblLenghtField.AutoSize = true;
-            this.lblLenghtField.Location = new System.Drawing.Point(37, 86);
-            this.lblLenghtField.Name = "lblLenghtField";
-            this.lblLenghtField.Size = new System.Drawing.Size(87, 13);
-            this.lblLenghtField.TabIndex = 8;
-            this.lblLenghtField.Text = "Largo del Campo";
-            // 
-            // txtCarpLargo
-            // 
-            this.txtCarpLargo.Location = new System.Drawing.Point(189, 83);
-            this.txtCarpLargo.Name = "txtCarpLargo";
-            this.txtCarpLargo.Size = new System.Drawing.Size(47, 20);
-            this.txtCarpLargo.TabIndex = 7;
             // 
             // lblCarNoPerm
             // 
@@ -228,6 +181,53 @@
             this.chkCharsCarp.Text = "Validar Caracteres Especiales";
             this.chkCharsCarp.UseVisualStyleBackColor = true;
             this.chkCharsCarp.CheckedChanged += new System.EventHandler(this.chkCharsCarp_CheckedChanged);
+            // 
+            // lblLenghtField
+            // 
+            this.lblLenghtField.AutoSize = true;
+            this.lblLenghtField.Location = new System.Drawing.Point(37, 86);
+            this.lblLenghtField.Name = "lblLenghtField";
+            this.lblLenghtField.Size = new System.Drawing.Size(87, 13);
+            this.lblLenghtField.TabIndex = 8;
+            this.lblLenghtField.Text = "Largo del Campo";
+            // 
+            // txtCarpLargo
+            // 
+            this.txtCarpLargo.Location = new System.Drawing.Point(189, 83);
+            this.txtCarpLargo.Name = "txtCarpLargo";
+            this.txtCarpLargo.Size = new System.Drawing.Size(47, 20);
+            this.txtCarpLargo.TabIndex = 7;
+            // 
+            // chkValidaLargoCarp
+            // 
+            this.chkValidaLargoCarp.AutoSize = true;
+            this.chkValidaLargoCarp.Location = new System.Drawing.Point(6, 65);
+            this.chkValidaLargoCarp.Name = "chkValidaLargoCarp";
+            this.chkValidaLargoCarp.Size = new System.Drawing.Size(139, 17);
+            this.chkValidaLargoCarp.TabIndex = 6;
+            this.chkValidaLargoCarp.Text = "Validar Largo de Campo";
+            this.chkValidaLargoCarp.UseVisualStyleBackColor = true;
+            this.chkValidaLargoCarp.CheckedChanged += new System.EventHandler(this.chkValidaLargoCarp_CheckedChanged);
+            // 
+            // chkRepeatedFolders
+            // 
+            this.chkRepeatedFolders.AutoSize = true;
+            this.chkRepeatedFolders.Location = new System.Drawing.Point(6, 42);
+            this.chkRepeatedFolders.Name = "chkRepeatedFolders";
+            this.chkRepeatedFolders.Size = new System.Drawing.Size(153, 17);
+            this.chkRepeatedFolders.TabIndex = 5;
+            this.chkRepeatedFolders.Text = "Error en carpetas repetidas";
+            this.chkRepeatedFolders.UseVisualStyleBackColor = true;
+            // 
+            // chkLevelCheck
+            // 
+            this.chkLevelCheck.AutoSize = true;
+            this.chkLevelCheck.Location = new System.Drawing.Point(6, 19);
+            this.chkLevelCheck.Name = "chkLevelCheck";
+            this.chkLevelCheck.Size = new System.Drawing.Size(205, 17);
+            this.chkLevelCheck.TabIndex = 4;
+            this.chkLevelCheck.Text = "Verificacion de Nivel Real con Campo";
+            this.chkLevelCheck.UseVisualStyleBackColor = true;
             // 
             // grpGrupos
             // 
